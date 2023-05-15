@@ -1,0 +1,141 @@
+.container{
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideDown 1s;
+    animation-fill-mode: forwards;
+}
+
+.containerOff{
+    height: 100vh;
+    width: 100vw;
+    background-color: transparent;
+    position: fixed;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    animation: slideUp 1s;
+    animation-fill-mode: forwards;
+}
+
+.modalContainer{
+    max-width: 40em;
+    max-width: 40em;
+    width: 70%;
+    height: 20em;
+    display: grid;
+    place-items: center;
+    background: rgba(241, 208, 14, 0.18);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5.6px);
+    -webkit-backdrop-filter: blur(5.6px);
+    border: 1px solid rgba(241, 208, 14, 0.3);
+}
+
+.modalContent{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    /* border: 2px solid red; */
+}
+
+.modalContent h2{
+    font-size: 2em;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+.modalContent span{
+    margin-top: 0.8em;
+    font-size: 1.2em;
+    font-weight: 600;
+    color: #fff;
+    text-align: center;
+}
+
+
+.buttonsContainer{
+    display: flex;
+    padding: 1em;
+    justify-content: center;
+    width: 100%;
+    gap: 3em;
+    /* border: 2px solid red; */
+ }
+
+ .btnControl{
+    max-width: 15em;
+    height: 4em;
+    width: 100%;
+    display: flex;
+    border-radius: 10px;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.3s;
+    font-size: 1em;
+    color: rgb(249, 246, 246);
+    font-weight: 600;
+    text-align: center;
+}
+
+.iconBtn{
+    color: #fff;
+    font-size: 2em;
+}
+
+.iconInfo{
+    color: #fff;
+    font-size: 5em;
+}
+
+.btnControl:nth-child(1){
+    background: rgba(40, 87, 255, 0.75);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 233, 40, 0.3);
+}
+
+.btnControl:nth-child(2){
+    background: rgba(255, 40, 40, 0.75);
+    border-radius: 16px;                                                                                    
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(5px);
+    -webkit-backdrop-filter: blur(5px);
+    border: 1px solid rgba(255, 40, 40, 0.3);
+}
+
+.btnControl:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+    transition: 0.3s;
+    filter: brightness(1.2);
+}
+@keyframes slideDown {
+    0%{
+        transform: translateY(-100%);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideUp {
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(-100%);
+    }
+}
