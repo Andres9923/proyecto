@@ -6,11 +6,11 @@
     z-index: 1;
     animation: slideInFromRight 1s;
     animation-fill-mode: forwards;
-    background: rgb(7,19,69);
-    background: -moz-linear-gradient(0deg, rgba(7,19,69,1) 34%, rgba(21,22,22,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(7,19,69,1) 34%, rgba(21,22,22,1) 100%);
-    background: linear-gradient(0deg, rgba(7,19,69,1) 34%, rgba(21,22,22,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#071345",endColorstr="#151616",GradientType=1);
+    background: rgb(213,213,213);
+    background: -moz-radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(216,165,68,1) 91%, rgba(217,146,11,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(216,165,68,1) 91%, rgba(217,146,11,1) 100%);
+    background: radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(216,165,68,1) 91%, rgba(217,146,11,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d5d5d5",endColorstr="#d9920b",GradientType=1);
 
 }
 
@@ -22,11 +22,11 @@
     position: fixed;
     animation: slideOutToRight 1s;
     animation-fill-mode: forwards;
-    background: rgb(7,19,69);
-    background: -moz-linear-gradient(0deg, rgba(7,19,69,1) 34%, rgba(21,22,22,1) 100%);
-    background: -webkit-linear-gradient(0deg, rgba(7,19,69,1) 34%, rgba(21,22,22,1) 100%);
-    background: linear-gradient(0deg, rgba(7,19,69,1) 34%, rgba(21,22,22,1) 100%);
-    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#071345",endColorstr="#151616",GradientType=1);
+    background: rgb(213,213,213);
+    background: -moz-radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(216,165,68,1) 91%, rgba(217,146,11,1) 100%);
+    background: -webkit-radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(216,165,68,1) 91%, rgba(217,146,11,1) 100%);
+    background: radial-gradient(circle, rgba(213,213,213,1) 0%, rgba(216,165,68,1) 91%, rgba(217,146,11,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d5d5d5",endColorstr="#d9920b",GradientType=1);
 }
 
 
@@ -71,7 +71,7 @@
     display: flex;
     justify-content: space-between;
     /* From https://css.glass */
-    background: rgba(243, 231, 231, 0.2);
+    background: rgba(28, 27, 27, 0.902);
     border-radius: 16px;
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(5px);

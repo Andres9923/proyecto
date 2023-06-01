@@ -1,0 +1,198 @@
+.container {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100vw;
+  background-color: #f5f5f5;
+  z-index: 0;
+  animation: slideDown 1s;
+  animation-fill-mode: forwards;
+  background: -moz-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d5d5d5",endColorstr="#d9920b",GradientType=1);
+}
+
+.containerOff {
+  bottom: 0;
+  left: 0;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  height: 90vh;
+  width: 100vw;
+  background-color: #f5f5f5;
+  z-index: 0;
+  animation: slideUp 1s;
+  animation-fill-mode: forwards;
+  background: -moz-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d5d5d5",endColorstr="#d9920b",GradientType=1);
+}
+
+@keyframes slideUp {
+  0% {
+    bottom: 0;
+  }
+  100% {
+    bottom: -90vh;
+    display: none;
+  }
+}
+
+@keyframes slideDown {
+  0% {
+    bottom: -90vh;
+  }
+  100% {
+    bottom: 0;
+    display: flex;
+  }
+}
+
+.closeBtn {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  height: 1.8em;
+  width: 1.8em;
+  /* From https://css.glass */
+  background: rgba(250, 18, 18, 0.2);
+  border-radius: 50%;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(250, 18, 18, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2em;
+  cursor: pointer;
+  filter: drop-shadow(0 4px 4px rgba(228, 227, 227, 0.855));
+  transition: 0.2s ease-in-out;
+}
+
+.closeBtn:hover {
+  background: rgba(250, 18, 18, 0.4);
+  border: 1px solid rgba(250, 18, 18, 0.5);
+  filter: drop-shadow(0 4px 4px rgba(228, 227, 227, 0.855));
+  transition: 0.2s ease-in-out;
+}
+
+.InfoContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  height: 60%;
+  width: 90%;
+  /* border: 2px solid red; */
+}
+
+.imageContainer {
+  width: 40%;
+  height: 90%;
+  /* border: 2px solid blue; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.textContainer {
+  width: 40%;
+  height: 90%;
+  padding: 1em;
+  /* border: 2px solid rgb(0, 0, 0); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 2em;
+}
+
+.textContainer h2 {
+  font-size: clamp(1.5rem, 5vw, 2rem);
+  font-weight: 600;
+  color: #000000;
+  text-align: center;
+}
+
+.textContainer p {
+  font-size: clamp(1rem, 5vw, 1.5rem);
+  font-weight: 400;
+  color: #000000;
+  text-align: left;
+}
+
+.teamContainer {
+  width: 90%;
+  height: 20%;
+  /* border: 2px solid rgb(0, 0, 0); */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 2em;
+}
+
+.userTeam {
+  width: 20%;
+  height: 90%;
+  border: 2px solid rgb(0, 0, 0);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  gap: 1em;
+  padding: 1em;
+  /* From https://css.glass */
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: 0.2s ease-in-out;
+}
+
+.userTeam:hover{
+    background: rgba(255, 255, 255, 0.4);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    filter: drop-shadow(0 4px 4px rgba(228, 227, 227, 0.855));
+    transition: 0.2s ease-in-out;
+}

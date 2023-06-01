@@ -10,7 +10,26 @@
   align-items: center;
   flex-direction: column;
   gap: 3em;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background: rgb(213, 213, 213);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d5d5d5",endColorstr="#d9920b",GradientType=1);
   animation: slideDown 1s;
   animation-fill-mode: forwards;
 }
@@ -27,7 +46,26 @@
   align-items: center;
   flex-direction: column;
   gap: 3em;
-  background-image: linear-gradient(to top, #30cfd0 0%, #330867 100%);
+  background: rgb(213, 213, 213);
+  background: -moz-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: -webkit-radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  background: radial-gradient(
+    circle,
+    rgba(213, 213, 213, 1) 0%,
+    rgba(216, 165, 68, 1) 91%,
+    rgba(217, 146, 11, 1) 100%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#d5d5d5",endColorstr="#d9920b",GradientType=1);
   animation: slideUp 1s;
   animation-fill-mode: forwards;
 }
@@ -49,7 +87,7 @@
 .bannerText {
   width: 25em;
   height: 6em;
-  color: rgb(238, 238, 238);
+  color: rgb(33, 33, 33);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -131,3 +169,93 @@
     display: flex;
   }
 }
+
+/* LOGIN CONTAINER */
+
+.loginContainer {
+  width: 80%;
+  height: 40vh;
+  /* border: 2px solid red; */
+  display: flex;
+  flex-direction: row;
+}
+
+.buttomContainer {
+  width: 20%;
+  height: 100%;
+  /* border: 3px solid black; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.formContainer {
+  width: 50%;
+  height: 100%;
+  /* border: 3px solid rgb(105, 207, 28); */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.formContainer form {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+  /* From https://css.glass */
+  background: rgba(62, 61, 61, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.formContainer form input {
+  width: 100%;
+  height: 3em;
+  color: black;
+  border-bottom: 2px solid rgb(6, 6, 6);
+  padding-left: 1em;
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.formContainer form input:focus {
+  outline: none;
+  border-bottom: 2px solid rgb(203, 130, 27);
+}
+
+.btnForm{
+  width: 100%;
+  height: 3em;
+  background-color: rgb(15, 23, 56);
+  border: none;
+  border-radius: 10px;
+  color: rgb(255, 255, 255);
+  font-size: 1.2em;
+  font-weight: 600;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  cursor: pointer;
+  transition: 0.3s all ease-in-out;
+}
+
+.btnForm:hover {
+  background-color: rgb(15, 23, 56);
+  color: rgb(175, 173, 36);
+  transition: 0.3s all ease-in-out;
+
+}
+
+

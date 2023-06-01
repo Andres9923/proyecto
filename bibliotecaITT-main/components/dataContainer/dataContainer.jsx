@@ -4,7 +4,7 @@ import {FaGenderless} from "react-icons/fa";
 import {ImPriceTag }  from "react-icons/im";
 import { AiOutlineBook, AiOutlineKey, AiFillEye, AiOutlineUser} from "react-icons/ai";
 
-export default function DataContainer({ data, handlePrintEvent, handleShowData, handleModal }) {
+export default function DataContainer({ data, handleSetOrder, handleDeleteOrder }) {
   return (
     <>
       <div className={styles.orderContainer}>
@@ -48,16 +48,13 @@ export default function DataContainer({ data, handlePrintEvent, handleShowData, 
         </div>
         <div className={styles.controlsContainer}>
           <button
-            id={data.id}
-            onClick={handleShowData}
-            className={styles.btnControl}
-          >
+            onClick={()=>{handleSetOrder(data.id)}}
+            className={styles.btnControl}>
             <AiFillEye className={styles.iconBtn} />
             <span>Revisar</span>
           </button>
           <button 
-            id={data.id}
-            onClick={handleModal} 
+            onClick={()=>{handleDeleteOrder(data.id)}} 
             className={styles.btnControl}>
             <BsFillTrashFill className={styles.iconBtn} />
             <span>Eliminar</span>

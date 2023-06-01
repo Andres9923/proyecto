@@ -7,10 +7,12 @@ import Preloader from "../../../components/common/preloader/preloader";
 import Head from "next/head";
 import React from "react";
 import axios from "axios";
+import {FaGenderless} from "react-icons/fa";
 import { BsCalendar2Date, BsFillTrashFill } from "react-icons/bs";
+import {ImPriceTag} from "react-icons/im";
 import {
-  AiFillPrinter,
-  AiFillEye,
+  AiOutlineBook,
+  AiOutlineKey,
   AiOutlinePhone,
   AiOutlineUser,
   AiOutlineMail,
@@ -63,69 +65,44 @@ export default function Search({ order, error }) {
         <Preloader />
         <div className={styles.resultSearchContainer}>
           <div className={styles.titleContainer}></div>
-          {/* <div className={styles.imageContainer}>
-            <Image src="/Logo.png" alt="search" width={200} height={100} />
-          </div> */}
           <div className={styles.resultContainer}>
             <div className={styles.infoOrderContainer}>
               <div className={styles.textInfo}>
                 <span>
-                  <AiOutlineUser />
+                  <AiOutlineKey />
                 </span>
-                {order.name}
+                {order.id}
               </div>
               <div className={styles.textInfo}>
                 <span>
-                  <BiBaseball />
+                  <AiOutlineBook />
                 </span>
-                {order.teamName}
+                {order.bookName}
               </div>
               <div className={styles.textInfo}>
                 <span>
-                  <AiOutlinePhone />
+                  <FaGenderless />
                 </span>
-                {order.phone}
-              </div>
-              <div className={styles.textInfo}>
-                <span>
-                  <AiOutlineMail />
-                </span>
-                {order.email}
+                {order.genre}
               </div>
               <div className={styles.textInfo}>
                 <span>
                   <BsCalendar2Date />
                 </span>
-                {order.date}
+                {order.agePublication}
               </div>
-            </div>
-            <div className={styles.playersInfoContainer}>
-              {React.Children.toArray(
-                order.players.map((player) => {
-                  return (
-                    <div className={styles.playerContainer}>
-                      <div className={styles.rowTable}>
-                        Nombre: {player.name}
-                      </div>
-                      <div className={styles.rowTable}>
-                        Genero: {player.genre}
-                      </div>
-                      <div className={styles.rowTable}>
-                        Numero de camiseta: {player.number}
-                      </div>
-                      <div className={styles.rowTable}>
-                        Talla: {player.size}
-                      </div>
-                      <div className={styles.rowTable}>
-                        Tipo de prendra: {player.clothes}
-                      </div>
-                      <div className={styles.rowTable}>
-                        portero: {player.goalkeeper}
-                      </div>
-                    </div>
-                  );
-                })
-              )}
+              <div className={styles.textInfo}>
+                <span>
+                  <AiOutlineUser />
+                </span>
+                {order.author}
+              </div>
+              <div className={styles.textInfo}>
+                <span>
+                  <ImPriceTag />
+                </span>
+                {order.priceBook}
+              </div>
             </div>
           </div>
           <button className={styles.btnSearcher} onClick={handleRedirect}>
@@ -138,8 +115,8 @@ export default function Search({ order, error }) {
 }
 
 export async function getServerSideProps({ query: { id } }) {
-  const res = await axios.get(`https://www.fistorsport.com/api/order/${id}`);
-  const data = await res.data;
+  // const res = await axios.get(`https://www.fistorsport.com/api/order/${id}`);
+  const res = await axios.get(`/api/order/${id}`);
   const order = data.data;
   console.log(order);
 

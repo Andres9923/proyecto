@@ -28,8 +28,8 @@ export default function MainModal({ showModal, handleCloseFunction, id }) {
 
   const deleteOrder = async () => {
     try {
-      let res = await axios.delete(`https://www.fistorsport.com/api/order/${id}`);
-      // let res = await axios.delete(`http://localhost:3000/api/order/${id}`);
+      // let res = await axios.delete(`https://biblioteca-itt.vercel.app//api/order/${id}`);
+      let res = await axios.delete(`/api/order/${id}`);
       res ? handleDeleteSuccess() : handleDeleteError();
     } catch (error) {
       console.error(error);

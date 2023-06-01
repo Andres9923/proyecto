@@ -17,7 +17,7 @@ export default function Search() {
       router.push(`/order/search/${idValue}`);
     }
 
-    const patternID = /^FS-[a-zA-Z0-9]{8}$/;
+    const patternID = /^Book-[a-zA-Z0-9]{8}$/;
 
     const handleChangeID = (e) => {
       setIdValue(e.target.value);
@@ -30,7 +30,7 @@ export default function Search() {
         return;
       }
       else if(!patternID.test(idValue)) {
-        alert("El ID no es válido (FS-xxxxxxxx)");
+        alert("El ID no es válido (Book-xxxxxxxx)");
         setIdValue("");
         return;
       }
@@ -67,7 +67,7 @@ export default function Search() {
           <h1>Buscador de libros</h1>
         </div>
         <div className={styles.imageContainer}>
-          <Image src="/Logo.jpeg" alt="search" width={200} height={100} />
+          <Image src="/Logo.jpeg" alt="search" width={200} height={200} />
         </div>
         
         <input 

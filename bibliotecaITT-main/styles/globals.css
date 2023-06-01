@@ -24,7 +24,6 @@ form input{
   font-size: clamp(0.8em , 2.5vw, 1em);
   background-color: transparent;
   color: #ffffff;
-
 }
 
 form input::placeholder{
@@ -40,5 +39,4 @@ section{
   align-items: center;
   justify-content: center;
   gap: 1em;
-
 }
